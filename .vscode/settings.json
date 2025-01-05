@@ -1,0 +1,7 @@
+{
+    "debug.console.closeOnEnd": true,
+    "debug.console.historySuggestions": false,
+    "debug.showSubSessionsInToolBar": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "prettier.enableDebugLogs": true
+}
