@@ -53,8 +53,9 @@ function getToppingsInfo (obj) {
 
 console.log(getToppingsInfo(papaJohns))
 
-function printAD (topping) {
-  console.log ("Welcome to Papa John's! We are located at 555 Main Street. This week, we are having a sale on "[topping] "  for $"(Object.values((papaJohns['pizzaToppings']).topping));". Better Ingredients. Better Pizza. Papa John's.")
+function printAD (topping, address, slogan) {
+  console.log ("Welcome to Papa John's! We are located at " + address + ". This week, we are having a sale on " + topping + "  for $" + papaJohns.pizzaToppings[topping] + ". " + slogan)
 }
 
-console.log(printAD ("bacon"))
+console.log(printAD ("bacon", "122 Glendale Boulevard", "When it comes to pizza, We think BIG!"))
+

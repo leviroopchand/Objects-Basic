@@ -26,3 +26,30 @@ const dominos = {
   zipcode: 54321,
   acceptsReservations: true,
 };
+
+
+// function printPizzaPlace (obj) {
+//   for (let [key, value] of Object.entries(obj)) {
+
+//     console.log(`${key}: ${value}`);
+
+//   }
+// }
+
+function printPizzaPlace (obj) {
+    for (let key in obj) {
+      console.log(key, obj[key])
+    }
+}
+
+console.log(printPizzaPlace (dominos));
+
+function toppingsPriceRange (toppings) {
+  let toppingPrices = [];
+  for (let value in toppings) {
+    toppingPrices.push(toppings[value]);
+  }
+  console.log('$' + Math.min(...toppingPrices) + ' to $' + Math.max(...toppingPrices));
+}
+
+console.log(toppingsPriceRange (dominos["pizzaToppings"]))
