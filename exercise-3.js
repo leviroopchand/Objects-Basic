@@ -53,3 +53,28 @@ function toppingsPriceRange (toppings) {
 }
 
 console.log(toppingsPriceRange (dominos["pizzaToppings"]))
+
+
+function calculateAverageRating (pizzaPlace){
+
+let starRate = [];
+let revobj = pizzaPlace["starReviews"];
+
+for (let value in (pizzaPlace["starReviews"])) {
+  starRate.push(revobj[value])
+}
+
+function revSum (starRate) {
+let sum = 0;
+for (let i = 0; i < starRate.length; i++) {
+  sum += starRate[i];
+}
+return sum ;
+}
+
+let averageReview = ((revSum(starRate)) / starRate.length).toFixed(1);
+
+console.log(averageReview);
+}
+
+console.log(calculateAverageRating(dominos))
